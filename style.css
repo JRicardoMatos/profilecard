@@ -1,0 +1,174 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+
+}
+
+:root{
+    --clr--color1: hsl(185, 75%, 39%);
+    --clr--color2: hsl(229, 23%, 23%);
+    --clr--color3: hsl(227, 10%, 46%);
+    --clr--color4: hsl(0, 0%, 59%);
+    --fnt--size:18px;
+
+}
+
+
+body{
+    height:100vh;
+    width:100vw;    
+    background: var(--clr--color1);
+    overflow:hidden;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    font-family:"Kumbh Sans", sans-serif;
+}
+img{
+    position: absolute;
+}
+.attribution{
+    position:absolute;
+    bottom:0%;
+    right:0%;
+}
+
+.background1, .background2{
+    position:absolute;
+}
+
+.background1{
+    bottom:-100%;
+    right:-170%;
+}
+
+.background2{
+    transform: rotate(90deg);
+    top:-90%;
+    left:-170%;
+}
+
+.card{
+    height:55%;
+    width:25%;
+    min-height: 320px;
+    min-width:320px;;
+    background: #F2F2F2;
+    border-radius:5%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    z-index:10;
+    overflow: hidden;
+}
+
+.card-top{
+    height:35%;
+    width:100%;
+    position:relative;
+    background: url('./images/bg-pattern-card.svg');
+}
+
+.circle{
+    overflow:hidden;
+    width:6rem;
+    height:6rem;
+    border-radius:50%;
+    border:5px #eaeaf3 solid;
+    position:absolute;
+    top:35%;
+    left:50%;
+    transform:translateX(-50%);
+    z-index:3;
+}
+
+.circle img{
+    width:6rem;
+}
+
+.card-bottom{
+    width:100%;
+    height:60%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0rem;
+}
+
+.name{
+    width:100%;
+    height:60%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content: center;
+}
+
+.stats{
+    border-top:3px #eaeaf3 solid;
+    width:100%;
+    height: 40%;
+    display:flex;
+    align-items:center;
+    justify-content: space-around;
+}
+
+.name h3, .stats h3{
+    font-size: var(--fnt--size);
+    color:var(--clr--color2);
+    font-weight: 700;
+}
+
+.name{
+    margin:1.5rem 0 0 0;
+}
+
+.stat{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+}
+
+.stats h4{
+    font-size:0.9rem;
+    color:var(--clr--color4);
+}
+
+.name h4{
+    font-size: 0.9rem;
+    color: var(--clr--color4);
+}
+
+.name span{
+    color:var(--clr--color4);
+}
+
+@media only screen and (min-width:520px){
+    .background1{
+        bottom:-100%;
+        right:-100%;
+    }
+    
+    .background2{
+        transform: rotate(90deg);
+        top:-90%;
+        left:-100%;
+    }
+}
+
+@media only screen and (min-width:820px){
+    .background1{
+        bottom:-100%;
+        right:-15%;
+    }
+    
+    .background2{
+        transform: rotate(90deg);
+        top:-90%;
+        left:-20%;
+    }
+}
